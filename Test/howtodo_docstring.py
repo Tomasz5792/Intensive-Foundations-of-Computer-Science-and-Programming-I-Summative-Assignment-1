@@ -23,6 +23,8 @@ print(add_numbers(1,2))
 
 isinstance()
 
+#multi output docstring
+
 from typing import Union
 
 def add_numbers(a: int, b: int, as_string: bool = False) -> Union[int, str]:

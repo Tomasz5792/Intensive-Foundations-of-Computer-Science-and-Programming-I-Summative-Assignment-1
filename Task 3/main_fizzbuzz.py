@@ -19,7 +19,6 @@ def fizzbuzz(number: int) -> str:
         ValueError: number should be an integer
     """
 
-
     if not isinstance(number, int):
         raise ValueError("number should be an integer")
 
