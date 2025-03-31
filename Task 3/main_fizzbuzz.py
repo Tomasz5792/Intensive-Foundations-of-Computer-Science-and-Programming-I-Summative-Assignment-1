@@ -6,6 +6,22 @@ Multiples of both 3 and 5 with "FizzBuzz"
 """
 
 def fizzbuzz(number: int) -> str:
+    """
+    plays the fizz buzz game
+
+    Args:
+        number (int): the number to fizzbuzz
+
+    Returns:
+        str: the string Fizz Buzz FizzBuzz or the number
+
+    Raises:
+        ValueError: number should be an integer
+    """
+
+
+    if not isinstance(number, int):
+        raise ValueError("number should be an integer")
 
     if number % 3 == 0 and number % 5 == 0:
         return "FizzBuzz"
@@ -17,3 +33,6 @@ def fizzbuzz(number: int) -> str:
         return "Buzz"
 
     return str(number)
+
+
+#print(fizzbuzz("sdf"))
