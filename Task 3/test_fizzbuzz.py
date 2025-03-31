@@ -13,11 +13,23 @@ def test_fizzbuzz_numbers_correct():
     assert fizzbuzz(4) == "4"
     assert fizzbuzz(7) == "7"
     assert fizzbuzz(8) == "8"
-    assert fizzbuzz(9) == "9"
-    assert fizzbuzz(10) == "10"
     
 def test_fizzbuzz_numbers_notcorrect():
     assert fizzbuzz(3) != "3"
     assert fizzbuzz(15) != "15"
     assert fizzbuzz(5) != "5"
     assert fizzbuzz(6) != "6"
+    assert fizzbuzz(9) != "9"
+    assert fizzbuzz(10) != "10"
+
+def test_fizzbuzz_fizz_correct():
+    assert fizzbuzz(3) == "Fizz"
+    assert fizzbuzz(6) == "Fizz"
+
+def test_fizzbuzz_buzz_correct():
+    assert fizzbuzz(5) == "Buzz"
+    assert fizzbuzz(10) == "Buzz"
+
+def test_fizzbuzz_fizzbuzz_correct():
+    assert fizzbuzz(15) == "FizzBuzz"
+    assert fizzbuzz(30) == "FizzBuzz"
