@@ -4,3 +4,6 @@ Multiples of 3 with "Fizz"
 Multiples of 5 with "Buzz"
 Multiples of both 3 and 5 with "FizzBuzz"
 """
+
+def fizzbuzz(number: int) -> str:
+    return str(number)
