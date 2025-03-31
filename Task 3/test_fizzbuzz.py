@@ -13,7 +13,7 @@ def test_fizzbuzz():
     assert fizzbuzz(3) == "Fizz"
     assert fizzbuzz(4) == "4"
     assert fizzbuzz(5) == "Buzz"
-    assert fizzbuzz(6) == "6"
+    assert fizzbuzz(6) == "Fizz"
     assert fizzbuzz(7) == "7"
     assert fizzbuzz(8) == "8"
     assert fizzbuzz(15) == "FizzBuzz"
