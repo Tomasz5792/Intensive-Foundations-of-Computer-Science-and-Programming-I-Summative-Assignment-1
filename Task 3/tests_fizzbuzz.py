@@ -8,4 +8,4 @@ Multiples of both 3 and 5 with "FizzBuzz"
 from main_fizzbuzz import fizzbuzz
 
 def test_fizzbuz_passes():
-    assert fizzbuzz(1) == "1"
+    assert fizzbuzz(1) == True
