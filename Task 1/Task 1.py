@@ -8,7 +8,16 @@ def handle_button_press(event):
 def create_gui():
     """
     Create a simple GUI
-    
+
+    Args:
+        a (int): The first number.
+        b (int): The second number.
+
+    Returns:
+        int: The sum of the two numbers.
+
+    Raises:
+        ValueError: If a or b are not integers.
     
     """
     root = tk.Tk()
