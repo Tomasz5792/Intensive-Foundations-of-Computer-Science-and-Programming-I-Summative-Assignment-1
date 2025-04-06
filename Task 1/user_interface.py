@@ -1,15 +1,15 @@
 import tkinter as tk
-
-
+from create_calculations import create_questions
 
 root = tk.Tk()
 
-def create_gui():
+
+def create_gui_questions(questions: dict):
     """
     Create a simple GUI
 
     Args:
-        None
+        questions (dict):  Dictionarry of questions and answers for use with the gui
 
     Returns:
         None
@@ -20,22 +20,28 @@ def create_gui():
     root.title("Title")
 
     #row 1
-    create_label(row=0)
+    create_label(row=0,text="Click on a button to do a question.")
 
     #row 2
-    button = create_button(row=1,column=1)
-    button2 = create_button(row=1,column=2)
-    button3 = create_button(row=1,column=3)
+    button = create_button(row=1, column=1, text=questions["question_1"]["question_text"], button_number=1)
+    button = create_button(row=1,column=2, text=questions["question_2"]["question_text"], button_number=2)
+    button = create_button(row=1,column=3, text=questions["question_3"]["question_text"], button_number=3)
 
     #row 3
-    button = create_button(row=2,column=1)
-    button2 = create_button(row=2,column=2)
-    button3 = create_button(row=2,column=3)
+    button = create_button(row=2,column=1, text=questions["question_4"]["question_text"], button_number=4)
+    button = create_button(row=2,column=2, text=questions["question_5"]["question_text"], button_number=5)
+    button = create_button(row=2,column=3, text=questions["question_6"]["question_text"], button_number=6)
 
     #row 4
-    create_label(row=3,columnspan=2)
-    button3 = create_button(row=3,column=3,height=1)
+    button = create_button(row=3,column=1, text=questions["question_7"]["question_text"], button_number=7)
+    button = create_button(row=3,column=2, text=questions["question_8"]["question_text"], button_number=8)
+    button = create_button(row=3,column=3, text=questions["question_9"]["question_text"], button_number=9)
 
+    #row 5
+    create_label(row=4,columnspan=2,text="Questions correct 0/9")
+    button = create_button(row=4,column=3,height=1,text="Reset",button_type="reset")
+
+    #app layout
     root.grid_rowconfigure(0, weight=1)
     root.grid_rowconfigure(1, weight=1)
     root.grid_rowconfigure(2, weight=1)
@@ -49,13 +55,14 @@ def create_gui():
 
     root.mainloop()
 
-def create_label(row: int,columnspan: int=3):
+
+def create_gui_answer(questions: dict, int_question_selected: int):
     """
-    Create lable for gui
+    Create a simple GUI to allow the user to pick an answer.
 
     Args:
-        row: (int): The row the label is created on.
-        columnspan (int, optional): The amount of columns the label spans. Defaults to 3.
+        questions (dict):  Dictionarry of questions and answers for use with the gui.
+        int_question_selected (int): Number of question selected.
 
     Returns:
         None
@@ -63,18 +70,95 @@ def create_label(row: int,columnspan: int=3):
     Raises:
         None
     """
-    label = tk.Label(root, text="Click a button below!", font=("Arial", 14))
+    root.title("Title")
+    string_question_selected = "question_" + str(int_question_selected)
+
+    #row 1
+    create_label(row=0,text="     Question to answer: " + questions[string_question_selected]["question_text"]+"     ")
+
+    #row 2
+    button = create_button(row=1, column=1, text=questions[string_question_selected]['answers_1']['answer_text'])
+    button = create_button(row=1,column=2, text=questions["question_2"]["question_text"])
+    button = create_button(row=1,column=3, text=questions["question_3"]["question_text"])
+
+    #row 3
+    button = create_button(row=2,column=1, text=questions["question_4"]["question_text"])
+    button = create_button(row=2,column=2, text=questions["question_5"]["question_text"])
+    button = create_button(row=2,column=3, text=questions["question_6"]["question_text"])
+
+    #row 4
+    button = create_button(row=3,column=1, text=questions["question_7"]["question_text"])
+    button = create_button(row=3,column=2, text=questions["question_8"]["question_text"])
+    button = create_button(row=3,column=3, text=questions["question_9"]["question_text"])
+
+    #row 5
+    create_label(row=4,columnspan=2,text="Questions correct 0/9")
+    button = create_button(row=4,column=3,height=1,text="Reset",button_type="reset")
+
+    #app layout
+    root.grid_rowconfigure(0, weight=1)
+    root.grid_rowconfigure(1, weight=1)
+    root.grid_rowconfigure(2, weight=1)
+    root.grid_rowconfigure(3, weight=1)
+    root.grid_rowconfigure(4, weight=1)
+    root.grid_rowconfigure(5, weight=1)
+    
+    root.grid_columnconfigure(1, weight=1)
+    root.grid_columnconfigure(2, weight=1)
+    root.grid_columnconfigure(3, weight=1)
+
+    root.mainloop()
+
+
+def create_label(row: int,columnspan: int=3, text: str="Error"):
+    """
+    Create lable for gui
+
+    Args:
+        row: (int): The row the label is created on.
+        columnspan (int, optional): The amount of columns the label spans. Defaults to 3.
+        text (str): Text for the box.  Defaults to Error.
+
+    Returns:
+        None
+
+    Raises:
+        None
+    """
+    label = tk.Label(root, text=text, font=("Arial", 14))
     label.grid(row=row, column=1, columnspan=columnspan, pady=10, sticky="n")
 
-def create_button(row: int, column: int, width: int=20, height: int=5):
+
+def create_label_question(row: int, column: int, text: str="Error"):
+    """
+    Create label for gui to show answered questions
+
+    Args:
+        row: (int): The row the label is created on.
+        text (str): Text for the box.  Defaults to Error.
+
+    Returns:
+        None
+
+    Raises:
+        None
+    """
+    label = tk.Label(root, text=text, font=("Arial", 14))
+    label.grid(row=row, column=column, pady=10, sticky="n")
+
+
+def create_button(row: int, column: int, button_number: int=0, width: int=20, height: int=5, text: str="Error", button_type: str="calculation"):
     """
     Create button for gui
 
     Args:
         row: (int): The row the button is created on.
         column: (int): The column the button is created on.
+        button_number: (int): The buttons number, used in functions.  Defaults to 0.
         width: (int, optional): The width of the button.  Defaults to 20.
         height: (int, optional): The height of the button.  Defaults to 5.
+        text (str, optional): Text for the box.  Defaults to Error.
+        button_type: (str, optional): The type of function the button runs.  Defaults to "calculation".
 
     Returns:
         tk.Button: The created button widget.
@@ -82,16 +166,46 @@ def create_button(row: int, column: int, width: int=20, height: int=5):
     Raises:
         None
     """
-    button = tk.Button(root, text="Click me", width=width, height=height)
+    button = tk.Button(root, text=text, width=width, height=height)
     button.grid(row=row, column=column, padx=5, pady=5, sticky="nsew")
-    button.bind("<Button-1>", lambda event: handle_button_press(event, row, column))
+
+    if button_type == "reset":
+        button.bind("<Button-1>", handle_button_press_reset)
+    elif button_type == "calculation":
+        button.bind("<Button-1>", lambda event: handle_button_press_select_question(event, button_number))
+    else:
+        button.bind("<Button-1>", lambda event: handle_button_press(event, row, column, button_number))
+    
     return button
 
-def handle_button_press(event, row, column):
+
+def handle_button_press(event, row, column, button_number):
     """
     Handles button press event
     """
-    print(f"Button row: {row} coumn: {column} was pressed.")
+    print(f"Button {button_number} row: {row} coumn: {column} was pressed.")
 
 
-create_gui()
+def handle_button_press_select_question(event, button_number):
+    """
+    Handles button press event
+    """
+    print(f"Button {button_number} was pressed.")
+    int_question_selected = button_number
+    create_gui_answer(questions, int_question_selected)
+
+
+
+def handle_button_press_reset(event):
+    """
+    Handles button press event
+    """
+    print("Reset was pressed")
+    global questions
+    questions = create_questions()
+    create_gui_questions(questions)
+
+
+questions = create_questions()
+
+create_gui_questions(questions)
