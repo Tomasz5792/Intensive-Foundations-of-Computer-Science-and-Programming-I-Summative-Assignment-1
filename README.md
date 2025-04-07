@@ -6,6 +6,8 @@ Code & Documentation for Simple Equation GUI Application. Created by Tomasz.
 ## Introduction
 The simple equation GUI application is a simple and interactive Tkinter gui maths game designed to help users practice simple equations.  The app presents a grid of 9 questions that can be selected and give 9 multiple choice potential answers to chose from.  Instant feedback is given for the answers and correct answers are tracked bu the GUI.  On the question screen there is also a button to reset the questions.
 
+<details closed><summary>User Documentation 🏫</summary>
+
 ## User Documentation
 This is a simple equation GUI application used to practice simple maths.
 
@@ -16,7 +18,8 @@ The app contains the following features:
 - Click the question to open the answer screen.
 - Question buttons update to labels when answered.
 - Score is tracked by the GUI
-- Theres a reset button to regenerate the questions and reset the score.
+- Theres a reset button to reset the questions and reset the score.
+
 
 ### How to install the app
 
@@ -26,22 +29,29 @@ The app contains the following features:
 
 ### Instructions
 
-1. Using the terminal that python is installed with 
+1. Using the terminal, make sure python is installed, with:
+```sh
+python3 --version
+```
+Using the terminal, make sure git is installed, with:
+```sh
+git --version
+```
+If either is not please follow the instructions in the "What you need" section.
+
 2. Download the app in your prefered way either by visiting [Link to GitHub Repo](https://github.com/Tomasz5792/Intensive-Foundations-of-Computer-Science-and-Programming-I-Summative-Assignment-1#) and downloading a zip file or using GitHub desktop:
 
 ![image of vscode](How-to-get-repo.png)
 
-If you yould like to use the powershell termanal, cd into the folder you want the repo saved and use this code:
+ If you yould like to use the powershell termanal, cd into the folder you want the repo saved and use this code:
 ```sh
 git clone https://github.com/Tomasz5792/Intensive-Foundations-of-Computer-Science-and-Programming-I-Summative-Assignment-1.git
 ```
-3. 
-4. 
-5. 
+
 
 ### How to use the app
 
-
+</details>
 
 ## Technical Documentation
 
