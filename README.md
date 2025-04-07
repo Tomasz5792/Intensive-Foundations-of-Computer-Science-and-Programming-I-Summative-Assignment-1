@@ -21,13 +21,16 @@ The app contains the following features:
 ### How to install the app
 
 #### What you need
-- A Python environment (3.7 or later) installed on your computer.  [Find here](https://www.python.org/) Written with 3.12.9.
-- git installed unless the zip folder is downloaded from GitHub.  [Find here](https://git-scm.com/)  [GitHub Desktop](https://github.com/apps/desktop)
+- A Python environment (3.7 or later) installed on your computer.  [Install Python](https://www.python.org/) Written with 3.12.9.
+- git installed, unless the zip folder is downloaded from GitHub.  [Install Git](https://git-scm.com/)  [Install GitHub Desktop](https://github.com/apps/desktop)
 
+### Instructions
 
-1. Check that python is installed with 
+1. Using the terminal that python is installed with 
 2. Download the app in your prefered way either by visiting [Link to GitHub Repo](https://github.com/Tomasz5792/Intensive-Foundations-of-Computer-Science-and-Programming-I-Summative-Assignment-1#) and downloading a zip file or using GitHub desktop:
+
 ![How to get repo](How to get repo.png)
+
 If you yould like to use the powershell termanal, cd into the folder you want the repo saved and use this code:
 ```sh
 git clone https://github.com/Tomasz5792/Intensive-Foundations-of-Computer-Science-and-Programming-I-Summative-Assignment-1.git
