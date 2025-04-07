@@ -3,10 +3,10 @@
 # Simple Equation GUI Application
 Code & Documentation for Simple Equation GUI Application. Created by Tomasz.
 
-## Introduction
+## Overview
 The simple equation GUI application is a simple and interactive Tkinter gui maths game designed to help users practice simple equations.  The app presents a grid of 9 questions that can be selected and give 9 multiple choice potential answers to chose from.  Instant feedback is given for the answers and correct answers are tracked bu the GUI.  On the question screen there is also a button to reset the questions.
 
-<details closed><summary>User Documentation 🏫</summary>
+<details closed><summary>User Documentation 🧑‍💻</summary>
 
 ## User Documentation
 This is a simple equation GUI application used to practice simple maths.
@@ -52,6 +52,7 @@ git clone https://github.com/Tomasz5792/Intensive-Foundations-of-Computer-Scienc
 ### How to use the app
 
 </details>
+<details closed><summary>Technical Documentation 💻</summary>
 
 ## Technical Documentation
 
@@ -70,6 +71,8 @@ git clone https://github.com/Tomasz5792/Intensive-Foundations-of-Computer-Scienc
 
 ### Global Variables
 
+</details>
+<details closed><summary>Future Plans 🔐</summary>
 
 ## Future Plans
 - Move the code for the GUI out of main and into a GUI module.
@@ -78,11 +81,19 @@ git clone https://github.com/Tomasz5792/Intensive-Foundations-of-Computer-Scienc
 - Add error handling.
 - Stop the terminal comimg up when the GUI opens.
 
+</details>
 
-to use maybee
+
+
+
+<details closed><summary>To be deleted after finished 🔐</summary>
+
+#to use maybee
 
 [Link Text](URL or Path)
 
 ```sh
 node -v
 ```
+
+</details>
