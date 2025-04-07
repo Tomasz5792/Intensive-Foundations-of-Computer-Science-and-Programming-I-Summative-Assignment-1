@@ -20,6 +20,7 @@ The app contains the following features:
 - Score is tracked by the GUI
 - Theres a reset button to reset the questions and reset the score.
 
+<details closed><summary>How to install the app 💻</summary>
 
 ### How to install the app
 
@@ -47,7 +48,7 @@ If either is not please follow the instructions in the "What you need" section.
 ```sh
 git clone https://github.com/Tomasz5792/Intensive-Foundations-of-Computer-Science-and-Programming-I-Summative-Assignment-1.git
 ```
-
+</details>
 
 ### How to use the app
 
