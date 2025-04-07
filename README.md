@@ -53,7 +53,7 @@ git clone https://github.com/Tomasz5792/Intensive-Foundations-of-Computer-Scienc
 ### How to use the app
 
 </details>
-<details closed><summary>Technical Documentation 💻</summary>
+<details closed><summary>Technical Documentation 🧑‍💼</summary>
 
 ## Technical Documentation
 
