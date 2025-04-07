@@ -35,7 +35,7 @@ def create_questions():
         questions["question_" + str(i)] = {
             "question_text":str(y)+" "+str(operator)+" X = "+str(z),
             "answer_text":str(y)+" "+str(operator)+" "+str(x)+" = "+str(z),
-            "answer_no_x":"place_holder",
+            "int_answer_x":x,
             "answer_correct?":"not_answered"
             }
         
@@ -97,5 +97,5 @@ def create_questions():
     
     return questions
 
-data = create_questions()
-print(data)
+#data = create_questions()
+#print(data)
