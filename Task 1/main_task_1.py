@@ -8,7 +8,7 @@ questions_correct = 0
 
 def create_gui_questions(questions: dict, questions_correct: int):
     """
-    Create a simple GUI
+    Create a simple GUI with a 9 by 9 grid patern.
 
     Args:
         questions (dict):  Dictionarry of questions and answers for use with the gui
@@ -36,7 +36,7 @@ def create_gui_questions(questions: dict, questions_correct: int):
         create_label_question(row=1, column=2, text=questions["question_2"]["question_text"]+"\n"+questions["question_2"]["answer_correct?"])
 
     if questions["question_3"]["answer_correct?"] == "not_answered":
-        button = create_button(row=1, column=3, text=questions["question_3"]["question_text"], button_number=2)
+        button = create_button(row=1, column=3, text=questions["question_3"]["question_text"], button_number=3)
     else:
         create_label_question(row=1, column=3, text=questions["question_3"]["question_text"]+"\n"+questions["question_3"]["answer_correct?"])
 
