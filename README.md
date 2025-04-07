@@ -28,9 +28,7 @@ The app contains the following features:
 
 1. Using the terminal that python is installed with 
 2. Download the app in your prefered way either by visiting [Link to GitHub Repo](https://github.com/Tomasz5792/Intensive-Foundations-of-Computer-Science-and-Programming-I-Summative-Assignment-1#) and downloading a zip file or using GitHub desktop:
-
-![How to get repo](How to get repo.png)
-
+![image of vscode](How-to-get-repo.png)
 If you yould like to use the powershell termanal, cd into the folder you want the repo saved and use this code:
 ```sh
 git clone https://github.com/Tomasz5792/Intensive-Foundations-of-Computer-Science-and-Programming-I-Summative-Assignment-1.git
