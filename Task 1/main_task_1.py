@@ -2,6 +2,7 @@ import tkinter as tk
 from create_calculations import create_questions
 
 root = tk.Tk()
+root.title("Generates simple equation")
 
 questions_correct = 0
 
@@ -19,8 +20,7 @@ def create_gui_questions(questions: dict, questions_correct: int):
     Raises:
         None
     """
-    root.title("Title")
-
+ 
     #row 1
     create_label(row=0,text="Click on a button to do a question.")
 
@@ -106,7 +106,6 @@ def create_gui_answer(questions: dict, int_question_selected: int, questions_cor
     Raises:
         None
     """
-    root.title("Title")
     string_question_selected = "question_" + str(int_question_selected)
 
     #row 1
@@ -148,7 +147,7 @@ def create_gui_answer(questions: dict, int_question_selected: int, questions_cor
 
 def create_label(row: int,columnspan: int=3, text: str="Error"):
     """
-    Create lable for gui
+    Create title label for gui.
 
     Args:
         row: (int): The row the label is created on.
