@@ -4,6 +4,7 @@ from create_calculations import create_questions
 root = tk.Tk()
 root.title("Generates simple equation")
 
+questions = {}
 questions_correct = 0
 
 def create_gui_questions(questions: dict, questions_correct: int):
