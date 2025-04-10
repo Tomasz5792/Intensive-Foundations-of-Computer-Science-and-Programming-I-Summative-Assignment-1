@@ -61,8 +61,10 @@ git clone https://github.com/Tomasz5792/Intensive-Foundations-of-Computer-Scienc
 ### How to use the app
 1. Install and open the app as detailed in the how to install the app section.
 2. Click on a question to answer.
+
 ![Question screen](Question-screen.png)
 4. Click on an answer for the question.
+
 ![Answer screen](Answer-screen.png)
 6. Watch your score go up.
 
