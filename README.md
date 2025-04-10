@@ -63,9 +63,11 @@ git clone https://github.com/Tomasz5792/Intensive-Foundations-of-Computer-Scienc
 2. Click on a question to answer.
 
 ![Question screen](Question-screen.png)
+
 4. Click on an answer for the question.
 
 ![Answer screen](Answer-screen.png)
+
 6. Watch your score go up.
 
 ---
