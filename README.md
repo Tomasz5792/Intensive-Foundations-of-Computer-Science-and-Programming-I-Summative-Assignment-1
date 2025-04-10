@@ -68,7 +68,7 @@ git clone https://github.com/Tomasz5792/Intensive-Foundations-of-Computer-Scienc
 
 ![Answer screen](Answer-screen.png)
 
-6. Watch your score go up.
+6. Score will increase when questions are correctly answered.
 
 ---
 
@@ -159,7 +159,7 @@ A dictionary to store the questions and answers that make the game work.
 
 ## Future Plans
 - Move the code for the GUI out of main and into a GUI module.
-- Stop using global variables.
+- Stop using global variables.  As this is critical to testing and scalability.
 - Write some tests.
 - Add error handling.
 - Stop the terminal coming up when the GUI opens.
