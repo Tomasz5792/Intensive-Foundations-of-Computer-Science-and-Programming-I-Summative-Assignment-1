@@ -112,14 +112,12 @@ Clone of the create_gui_questions function but creates an answer gui with 9 answ
 
 ### gui component functions
 
-#### create_label(row: int, columnspan: int=3, text: str="Error")
-Creates a label for the title and questions answered box.
+| Function Name           | Parameters                                                                 | Description                                                             |
+|-------------------------|---------------------------------------------------------------------------|-------------------------------------------------------------------------|
+| `create_label`           | `row: int, columnspan: int=3, text: str="Error"`                           | Creates a label for the title and questions answered box.               |
+| `create_label_question`  | `row: int, column: int, text: str="Error"`                                 | Creates the label to replace the button when the question is answered, used on the question screen. |
+| `create_button`          | `row: int, column: int, int_question_selected: int=0, button_number: int=0, width: int=20, height: int=5, text: str="Error", button_type: str="calculation"` | Creates the button used on both GUI screens for questions and answers.   |
 
-#### create_label_question(row: int, column: int, text: str="Error")
-Creates the label to replace the button when the question is answered, used on the question screen.
-
-#### create_button(row: int, column: int, int_question_selected: int=0, button_number: int=0, width: int=20, height: int=5, text: str="Error", button_type: str="calculation")
-Creates the button used on both GUI screens for questions and answers.
 
 Example where the create_button and create_label_question functions were used within the create_gui_questions functions in order to create the GUI at row 1 column 1
 ```sh
