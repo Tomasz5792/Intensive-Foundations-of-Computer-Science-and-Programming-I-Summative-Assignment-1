@@ -89,10 +89,9 @@ Used to create a dictionary of questions and answers for use in the GUI.
 #### create_answer(i: int, answer: int, x: int, is_correct_answer: bool=False)
 Called from create_questions() and is used to create correct and incorrect answers for each question.
 
----
-
 </details>
 
+---
 
 ### Main functions
 
