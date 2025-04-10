@@ -121,6 +121,14 @@ Creates the label to replace the button when the question is answered, used on t
 #### create_button(row: int, column: int, int_question_selected: int=0, button_number: int=0, width: int=20, height: int=5, text: str="Error", button_type: str="calculation")
 Creates the button used on both GUI screens for questions and answers.
 
+Example where the create_button and create_label_question functions were used within the create_gui_questions functions in order to create the GUI at row 1 column 1
+```sh
+    if questions["question_1"]["answer_correct?"] == "not_answered":
+        button = create_button(row=1, column=1, text=questions["question_1"]["question_text"], button_number=1)
+    else:
+        create_label_question(row=1, column=1, text=questions["question_1"]["question_text"]+"\n"+questions["question_1"]["answer_correct?"])
+```
+
 ---
 
 ### Event handling functions
