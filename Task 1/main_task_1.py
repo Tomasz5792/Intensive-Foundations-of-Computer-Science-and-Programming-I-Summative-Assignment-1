@@ -262,6 +262,7 @@ def handle_button_press_reset(event):
     Handles button press reset event
     """
     print("Reset was pressed")
+    #resets questions and questions correct globally
     global questions
     global questions_correct
     questions = create_questions()
@@ -277,7 +278,6 @@ def handle_button_press_back(event):
     print("Reset was pressed")
     clear_root()
     create_gui_questions(questions,questions_correct)
-    #print(questions)
 
 
 def clear_root():

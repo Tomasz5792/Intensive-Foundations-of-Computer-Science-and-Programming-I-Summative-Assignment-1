@@ -4,7 +4,7 @@
 Code & Documentation for Simple Equation GUI Application. Created by Tomasz.
 
 ## Overview
-The simple equation GUI application is a simple and interactive Tkinter gui maths game designed to help users practice simple equations.  The app presents a grid of 9 questions that can be selected and give 9 multiple choice potential answers to chose from.  Instant feedback is given for the answers and correct answers are tracked bu the GUI.  On the question screen there is also a button to reset the questions.
+The simple equation GUI application is a simple and interactive Tkinter gui maths game designed to help users practice simple equations.  The app presents a grid of 9 questions that can be selected and give 9 multiple choice potential answers to chose from.  Instant feedback is given for the answers and correct answers are tracked bu the GUI.
 
 <details closed><summary>User Documentation 🧑‍💻</summary>
 
@@ -18,7 +18,7 @@ The app contains the following features:
 - Click the question to open the answer screen.
 - Question buttons update to labels when answered.
 - Score is tracked by the GUI
-- Theres a reset button to reset the questions and reset the score.
+- Theres a reset button to reset the questions and the score.
 
 <details closed><summary>How to install the app 💻</summary>
 
@@ -48,9 +48,13 @@ If either is not please follow the instructions in the "What you need" section.
 ```sh
 git clone https://github.com/Tomasz5792/Intensive-Foundations-of-Computer-Science-and-Programming-I-Summative-Assignment-1.git
 ```
+3. Go to the folder containing Main_Task1.py and double click to run.  ![Open program](Open-program.png)
 </details>
 
 ### How to use the app
+1. 
+2. 
+3. 
 
 </details>
 <details closed><summary>Technical Documentation 🧑‍💼</summary>

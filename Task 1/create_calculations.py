@@ -20,6 +20,7 @@ def create_questions():
         y = random.randint(1,20)
         z = random.randint(1,20)
         
+        #randomise calculation type and correct calculation based on type chosen
         get_operator = lambda: ['+', '+', '-', '-', 'x', '%'][random.randint(0, 5)]
         operator = get_operator()
 
@@ -65,6 +66,7 @@ def create_questions():
                         "is_correct_answer" : True
                     }
                 else:
+                    #Randomises wrong answer
                     operator = get_operator()
                     if operator == '+':
                         incorrect_answer = x + random.randint(1,20)
