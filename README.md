@@ -83,8 +83,9 @@ git clone https://github.com/Tomasz5792/Intensive-Foundations-of-Computer-Scienc
 ### Modules Used
 
 <details closed><summary>tkinter</summary>
-tkinter is included with Python as standard.
-[Documentation for tkinter](https://docs.python.org/3/library/tkinter.html)
+
+- tkinter is included with Python as standard.
+- [Documentation for tkinter](https://docs.python.org/3/library/tkinter.html)
 </details>
 
 <details closed><summary>custom module create_calculations.py</summary>
