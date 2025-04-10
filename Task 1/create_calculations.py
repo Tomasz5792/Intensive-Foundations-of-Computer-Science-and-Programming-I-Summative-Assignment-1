@@ -99,5 +99,3 @@ def create_questions():
     
     return questions
 
-#data = create_questions()
-#print(data)
