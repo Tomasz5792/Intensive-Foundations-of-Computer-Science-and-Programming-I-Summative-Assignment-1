@@ -114,10 +114,9 @@ Clone of the create_gui_questions function but creates an answer gui with 9 answ
 
 | Function Name           | Parameters                                                                 | Description                                                             |
 |-------------------------|---------------------------------------------------------------------------|-------------------------------------------------------------------------|
-| `create_label`           | `row: int, columnspan: int=3, text: str="Error"`                           | Creates a label for the title and questions answered box.               |
-| `create_label_question`  | `row: int, column: int, text: str="Error"`                                 | Creates the label to replace the button when the question is answered, used on the question screen. |
-| `create_button`          | `row: int, column: int, int_question_selected: int=0, button_number: int=0, width: int=20, height: int=5, text: str="Error", button_type: str="calculation"` | Creates the button used on both GUI screens for questions and answers.   |
-
+| create_label            | row: int, columnspan: int=3, text: str="Error"                            | Creates a label for the title and questions answered box.               |
+| create_label_question   | row: int, column: int, text: str="Error"                                  | Creates the label to replace the button when the question is answered, used on the question screen. |
+| create_button           | row: int, column: int, int_question_selected: int=0, button_number: int=0, width: int=20, height: int=5, text: str="Error", button_type: str="calculation" | Creates the button used on both GUI screens for questions and answers.   |
 
 Example where the create_button and create_label_question functions were used within the create_gui_questions functions in order to create the GUI at row 1 column 1
 ```sh
@@ -126,18 +125,17 @@ Example where the create_button and create_label_question functions were used wi
     else:
         create_label_question(row=1, column=1, text=questions["question_1"]["question_text"]+"\n"+questions["question_1"]["answer_correct?"])
 ```
-
 ---
 
 ### Event handling functions
 
-| Function Name                                 | Description                                                                                                                                       |
-|----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| handle_button_press(event, row, column, button_number) | Used to test if the app is working by recording which button is pressed.                                                                             |
-| handle_button_press_select_question(event, button_number) | Handles events when a question button is pressed. Calls the answer GUI to be created and passes in the question selected.                         |
-| handle_button_press_select_answer(event, button_number, int_question_selected) | Handles events when an answer button is pressed. Updates the answer selected and evaluates if it is correct. If correct, update the score. Then, it calls the question GUI to be re-created. |
-| handle_button_press_reset(event)            | Resets the questions and the score.                                                                                                               |
-| handle_button_press_back(event)             | Returns the user to the question GUI so they can select another question.                                                                         |
+| Function Name                                      | Parameters                                                                                           | Description                                                                                                                                       |
+|----------------------------------------------------|------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| handle_button_press                                | event, row, column, button_number                                                                     | Used to test if the app is working by recording which button is pressed.                                                                             |
+| handle_button_press_select_question                | event, button_number                                                                                 | Handles events when a question button is pressed. Calls the answer GUI to be created and passes in the question selected.                         |
+| handle_button_press_select_answer                  | event, button_number, int_question_selected                                                          | Handles events when an answer button is pressed. Updates the answer selected and evaluates if it is correct. If correct, update the score. Then, it calls the question GUI to be re-created. |
+| handle_button_press_reset                          | event                                                                                                 | Resets the questions and the score.                                                                                                               |
+| handle_button_press_back                           | event                                                                                                 | Returns the user to the question GUI so they can select another question.                                                                          |
 
 ---
 
