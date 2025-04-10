@@ -80,6 +80,8 @@ Called from create_questions() and is used to create correct and incorrect answe
 
 </details>
 
+---
+
 ### Main functions
 
 #### create_gui_questions(questions: dict, questions_correct: int)
@@ -88,6 +90,7 @@ Creates the gui question layout.  It is a 3 x 3 grid of math question buttons.  
 #### create_gui_answer(questions: dict, int_question_selected: int, questions_correct: int)
 Clone of the create_gui_questions function but creates an answer gui with 9 answers for the uset to select.  Also has a back button.  Additionally to the create_gui_questions function it also requires the question selected to be passed to it.
 
+---
 
 ### gui component functions
 
@@ -100,6 +103,7 @@ Creates the label to replace the button when the question is answered, used on t
 #### create_button(row: int, column: int, int_question_selected: int=0, button_number: int=0, width: int=20, height: int=5, text: str="Error", button_type: str="calculation")
 Creates the button used on both gui screens for questions and answers.
 
+---
 
 ### Event handling functions
 
