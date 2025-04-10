@@ -71,7 +71,7 @@ git clone https://github.com/Tomasz5792/Intensive-Foundations-of-Computer-Scienc
 
 <details closed><summary>custom module create_calculations.py</summary>
 
-### Main functions
+#### create_calculations.py functions
 #### create_questions()
 Used to create a dictionarry of questions and answers for use in the gui.
 
@@ -102,6 +102,16 @@ Creates the button used on both gui screens for questions and answers.
 
 
 ### Event handling functions
+
+| Function Name                                 | Description                                                                                                                                       |
+|----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| `handle_button_press(event, row, column, button_number)` | Used to test the app is working by recording which button is pressed.                                                                             |
+| `handle_button_press_select_question(event, button_number)` | Handles events when a question button is pressed. Calls the answer GUI to be created and passes in the question selected.                         |
+| `handle_button_press_select_answer(event, button_number, int_question_selected)` | Handles events when an answer button is pressed. Updates the answer selected and evaluates if it is correct. If correct, updates the score. Then calls the question GUI to be re-created. |
+| `handle_button_press_reset(event)`            | Resets the questions and the score.                                                                                                               |
+| `handle_button_press_back(event)`             | Returns the user to the question GUI so they can select another question.                                                                         |
+
+
 #### handle_button_press(event, row, column, button_number)
 Used to test the app is working by recording which button is pressed.
 
