@@ -6,6 +6,8 @@ Code & Documentation for Simple Equation GUI Application. Created by Tomasz.
 ## Overview
 The simple equation GUI application is a simple and interactive Tkinter gui maths game designed to help users practice simple equations.  The app presents a grid of 9 questions that can be selected and give 9 multiple choice potential answers to chose from.  Instant feedback is given for the answers and correct answers are tracked bu the GUI.
 
+---
+
 <details closed><summary>User Documentation 🧑‍💻</summary>
 
 ## User Documentation
@@ -19,6 +21,8 @@ The app contains the following features:
 - Question buttons update to labels when answered.
 - Score is tracked by the GUI
 - Theres a reset button to reset the questions and the score.
+
+---
 
 <details closed><summary>How to install the app 💻</summary>
 
@@ -49,6 +53,9 @@ If either is not please follow the instructions in the "What you need" section.
 git clone https://github.com/Tomasz5792/Intensive-Foundations-of-Computer-Science-and-Programming-I-Summative-Assignment-1.git
 ```
 3. Go to the folder containing Main_Task1.py and double click to run.  ![Open program](Open-program.png)
+
+---
+
 </details>
 
 ### How to use the app
@@ -58,7 +65,12 @@ git clone https://github.com/Tomasz5792/Intensive-Foundations-of-Computer-Scienc
 4. Watch your score go up.
 
 </details>
+
+---
+
 <details closed><summary>Technical Documentation 🧑‍💼</summary>
+
+
 
 ## Technical Documentation
 
@@ -78,9 +90,10 @@ Used to create a dictionarry of questions and answers for use in the gui.
 #### create_answer(i: int, answer: int, x: int, is_correct_answer: bool=False)
 Called from create_questions() and is used to create correct and incorrect answers for each question.
 
+---
+
 </details>
 
----
 
 ### Main functions
 
@@ -115,28 +128,14 @@ Creates the button used on both gui screens for questions and answers.
 | `handle_button_press_reset(event)`            | Resets the questions and the score.                                                                                                               |
 | `handle_button_press_back(event)`             | Returns the user to the question GUI so they can select another question.                                                                         |
 
-
-#### handle_button_press(event, row, column, button_number)
-Used to test the app is working by recording which button is pressed.
-
-#### handle_button_press_select_question(event, button_number)
-Handles events when a question button is pressed.  Calls the answer gui to be created and passes in the question selected.
-
-#### handle_button_press_select_answer(event, button_number, int_question_selected)
-Handles events when an answer button is pressed.  Updates the answer selected and evaluates if it is correct, if correct updates the score.  Thenc alls the question gui to be re-created.
-
-#### handle_button_press_reset(event)
-Resets the questions and the score.
-
-#### handle_button_press_back(event)
-Returns the user to the question gui so they can select another question.
-
+---
 
 ### Utility functions
 
 #### clear_root()
 Destroys the current gui for use when creating a new one so they dont indefinatly overlap.
 
+---
 
 ### Global Variables
 
@@ -149,6 +148,7 @@ An integer to store the questions that the user has got correct.
 #### questions
 A dictionarry to store the questions and answers that make the game work.
 
+---
 
 </details>
 <details closed><summary>Future Plans 🔐</summary>
@@ -159,5 +159,7 @@ A dictionarry to store the questions and answers that make the game work.
 - Write some tests.
 - Add error handling.
 - Stop the terminal comimg up when the GUI opens.
+
+---
 
 </details>
