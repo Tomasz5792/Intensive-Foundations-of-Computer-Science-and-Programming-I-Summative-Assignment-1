@@ -186,8 +186,6 @@ A dictionary to store the questions and answers that make the game work.
 
 <details closed><summary>References 📄</summary>
 
----
-
 1. missKatiaPunter (2025) README.md [Online], GitHub. Available at: https://github.com/EDGENortheastern/if2-seminar2/blob/main/README.md (Accessed: 10 April 2025).
 
 2. jackbash1 (2025) README.md [Online], GitHub. Available at: https://github.com/jackbash1/METAR-PressureConverter/blob/main/README.md (Accessed: 10 April 2025).
