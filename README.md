@@ -118,12 +118,12 @@ Clone of the create_gui_questions function but creates an answer gui with 9 answ
 | create_label_question   | row: int, column: int, text: str="Error"                                  | Creates the label to replace the button when the question is answered, used on the question screen. |
 | create_button           | row: int, column: int, int_question_selected: int=0, button_number: int=0, width: int=20, height: int=5, text: str="Error", button_type: str="calculation" | Creates the button used on both GUI screens for questions and answers.   |
 
-Example where the create_button and create_label_question functions were used within the create_gui_questions functions in order to create the GUI at row 1 column 1
+- Example where the create_button and create_label_question functions were used within the create_gui_questions functions in order to create the GUI at row 1 column 1
 ```sh
-    if questions["question_1"]["answer_correct?"] == "not_answered":
-        button = create_button(row=1, column=1, text=questions["question_1"]["question_text"], button_number=1)
-    else:
-        create_label_question(row=1, column=1, text=questions["question_1"]["question_text"]+"\n"+questions["question_1"]["answer_correct?"])
+if questions["question_1"]["answer_correct?"] == "not_answered":
+    button = create_button(row=1, column=1, text=questions["question_1"]["question_text"], button_number=1)
+else:
+    create_label_question(row=1, column=1, text=questions["question_1"]["question_text"]+"\n"+questions["question_1"]["answer_correct?"])
 ```
 ---
 
@@ -143,6 +143,17 @@ Example where the create_button and create_label_question functions were used wi
 
 #### clear_root()
 Destroys the current GUI for use when creating a new one so they don't overlap.
+
+- Example of an event function where the clear_root function is used.
+```sh
+def handle_button_press_back(event):
+    """
+    Handles button press back event
+    """
+    print("Reset was pressed")
+    clear_root()
+    create_gui_questions(questions,questions_correct)
+```
 
 ---
 
