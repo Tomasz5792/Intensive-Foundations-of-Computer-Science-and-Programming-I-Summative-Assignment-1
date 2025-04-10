@@ -54,15 +54,17 @@ git clone https://github.com/Tomasz5792/Intensive-Foundations-of-Computer-Scienc
 ```
 3. Go to the folder containing Main_Task1.py and double-click to run.  ![Open program](Open-program.png)
 
----
-
 </details>
+
+---
 
 ### How to use the app
 1. Install and open the app as detailed in the how to install the app section.
-2. Click on a question to answer.  ![Question screen](Question-screen.png)
-3. Click on an answer for the question.  ![Answer screen](Answer-screen.png)
-4. Watch your score go up.
+2. Click on a question to answer.
+   ![Question screen](Question-screen.png)
+4. Click on an answer for the question.
+   ![Answer screen](Answer-screen.png)
+6. Watch your score go up.
 
 ---
 
