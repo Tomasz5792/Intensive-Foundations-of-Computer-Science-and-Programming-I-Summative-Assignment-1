@@ -33,5 +33,3 @@ def fizzbuzz(number: int) -> str:
 
     return str(number)
 
-
-#print(fizzbuzz("sdf"))
