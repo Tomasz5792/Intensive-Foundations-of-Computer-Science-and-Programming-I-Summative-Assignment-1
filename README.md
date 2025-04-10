@@ -83,7 +83,8 @@ git clone https://github.com/Tomasz5792/Intensive-Foundations-of-Computer-Scienc
 ### Modules Used
 
 <details closed><summary>tkinter</summary>
-[Documentation for tkinter](https://docs.python.org/3/library/tkinter.html)
+- tkinter is included with Python as standard.
+- [Documentation for tkinter](https://docs.python.org/3/library/tkinter.html)
 </details>
 
 <details closed><summary>custom module create_calculations.py</summary>
@@ -126,11 +127,11 @@ Creates the button used on both GUI screens for questions and answers.
 
 | Function Name                                 | Description                                                                                                                                       |
 |----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| `handle_button_press(event, row, column, button_number)` | Used to test if the app is working by recording which button is pressed.                                                                             |
-| `handle_button_press_select_question(event, button_number)` | Handles events when a question button is pressed. Calls the answer GUI to be created and passes in the question selected.                         |
-| `handle_button_press_select_answer(event, button_number, int_question_selected)` | Handles events when an answer button is pressed. Updates the answer selected and evaluates if it is correct. If correct, update the score. Then, it calls the question GUI to be re-created. |
-| `handle_button_press_reset(event)`            | Resets the questions and the score.                                                                                                               |
-| `handle_button_press_back(event)`             | Returns the user to the question GUI so they can select another question.                                                                         |
+| handle_button_press(event, row, column, button_number) | Used to test if the app is working by recording which button is pressed.                                                                             |
+| handle_button_press_select_question(event, button_number) | Handles events when a question button is pressed. Calls the answer GUI to be created and passes in the question selected.                         |
+| handle_button_press_select_answer(event, button_number, int_question_selected) | Handles events when an answer button is pressed. Updates the answer selected and evaluates if it is correct. If correct, update the score. Then, it calls the question GUI to be re-created. |
+| handle_button_press_reset(event)            | Resets the questions and the score.                                                                                                               |
+| handle_button_press_back(event)             | Returns the user to the question GUI so they can select another question.                                                                         |
 
 ---
 
