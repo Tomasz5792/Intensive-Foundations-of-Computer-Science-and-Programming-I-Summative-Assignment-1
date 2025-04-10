@@ -4,23 +4,23 @@
 Code & Documentation for Simple Equation GUI Application. Created by Tomasz.
 
 ## Overview
-The simple equation GUI application is a simple and interactive Tkinter gui maths game designed to help users practice simple equations.  The app presents a grid of 9 questions that can be selected and give 9 multiple choice potential answers to chose from.  Instant feedback is given for the answers and correct answers are tracked bu the GUI.
-
----
+The simple equation GUI application is a simple and interactive Tkinter GUI maths game designed to help users practice simple equations.  The app presents a grid of 9 questions that can be selected and gives 9 potential answers to choose from.  Instant feedback is given for the answers, and correct answers are tracked by the GUI.
 
 <details closed><summary>User Documentation 🧑‍💻</summary>
+
+---
 
 ## User Documentation
 This is a simple equation GUI application used to practice simple maths.
 
 ### Features
 The app contains the following features:
-- Displays 9 simple equasions.
+- Displays 9 simple equations.
 - Each question has 9 possible choices.
 - Click the question to open the answer screen.
 - Question buttons update to labels when answered.
-- Score is tracked by the GUI
-- Theres a reset button to reset the questions and the score.
+- The GUI tracks score
+- There's a reset button to reset the questions and the score.
 
 ---
 
@@ -34,25 +34,25 @@ The app contains the following features:
 
 ### Instructions
 
-1. Using the terminal, make sure python is installed, with:
+1. Using the terminal, make sure Python is installed with:
 ```sh
 python3 --version
 ```
-Using the terminal, make sure git is installed, with:
+Using the terminal, make sure git is installed with:
 ```sh
 git --version
 ```
-If either is not please follow the instructions in the "What you need" section.
+If either is not, please follow the instructions in the "What you need" section.
 
-2. Download the app in your prefered way either by visiting [Link to GitHub Repo](https://github.com/Tomasz5792/Intensive-Foundations-of-Computer-Science-and-Programming-I-Summative-Assignment-1#) and downloading a zip file or using GitHub desktop:
+2. Download the app in your preferred way either by visiting [Link to GitHub Repo](https://github.com/Tomasz5792/Intensive-Foundations-of-Computer-Science-and-Programming-I-Summative-Assignment-1#) and downloading a zip file or using GitHub desktop:
 
 ![image of vscode](How-to-get-repo.png)
 
- If you yould like to use the powershell termanal, cd into the folder you want the repo saved and use this code:
+ If you would like to use the powershell termanal, cd into the folder you want the repo saved and use this code:
 ```sh
 git clone https://github.com/Tomasz5792/Intensive-Foundations-of-Computer-Science-and-Programming-I-Summative-Assignment-1.git
 ```
-3. Go to the folder containing Main_Task1.py and double click to run.  ![Open program](Open-program.png)
+3. Go to the folder containing Main_Task1.py and double-click to run.  ![Open program](Open-program.png)
 
 ---
 
@@ -64,12 +64,11 @@ git clone https://github.com/Tomasz5792/Intensive-Foundations-of-Computer-Scienc
 3. Click on an answer for the question.  ![Answer screen](Answer-screen.png)
 4. Watch your score go up.
 
-</details>
-
 ---
 
-<details closed><summary>Technical Documentation 🧑‍💼</summary>
+</details>
 
+<details closed><summary>Technical Documentation 🧑‍💼</summary>
 
 
 ## Technical Documentation
@@ -85,7 +84,7 @@ git clone https://github.com/Tomasz5792/Intensive-Foundations-of-Computer-Scienc
 
 #### create_calculations.py functions
 #### create_questions()
-Used to create a dictionarry of questions and answers for use in the gui.
+Used to create a dictionary of questions and answers for use in the GUI.
 
 #### create_answer(i: int, answer: int, x: int, is_correct_answer: bool=False)
 Called from create_questions() and is used to create correct and incorrect answers for each question.
@@ -98,10 +97,10 @@ Called from create_questions() and is used to create correct and incorrect answe
 ### Main functions
 
 #### create_gui_questions(questions: dict, questions_correct: int)
-Creates the gui question layout.  It is a 3 x 3 grid of math question buttons.  When questions are answered the button is replaced by a guestion label which displays if the answer was correct or not.  There is also a reset button to reset the questions and score and a label to display the score.  It requires the questions dictionarry and the questions correct integer to be passed to it.
+Creates the GUI question layout.  It is a 3 x 3 grid of math question buttons.  When questions are answered, the button is replaced by a guestion label which displays if the answer was correct or not.  There is also a reset button to reset the questions and score and a label to display the score.  It requires the questions dictionary and the questions correct integer to be passed to it.
 
 #### create_gui_answer(questions: dict, int_question_selected: int, questions_correct: int)
-Clone of the create_gui_questions function but creates an answer gui with 9 answers for the uset to select.  Also has a back button.  Additionally to the create_gui_questions function it also requires the question selected to be passed to it.
+Clone of the create_gui_questions function but creates an answer gui with 9 answers for the user to select.  Also has a back button.  In addition to the create_gui_questions function it also requires the question selected to be passed to it.
 
 ---
 
@@ -114,7 +113,7 @@ Creates a label for the title and questions answered box.
 Creates the label to replace the button when the question is answered, used on the question screen.
 
 #### create_button(row: int, column: int, int_question_selected: int=0, button_number: int=0, width: int=20, height: int=5, text: str="Error", button_type: str="calculation")
-Creates the button used on both gui screens for questions and answers.
+Creates the button used on both GUI screens for questions and answers.
 
 ---
 
@@ -122,9 +121,9 @@ Creates the button used on both gui screens for questions and answers.
 
 | Function Name                                 | Description                                                                                                                                       |
 |----------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| `handle_button_press(event, row, column, button_number)` | Used to test the app is working by recording which button is pressed.                                                                             |
+| `handle_button_press(event, row, column, button_number)` | Used to test if the app is working by recording which button is pressed.                                                                             |
 | `handle_button_press_select_question(event, button_number)` | Handles events when a question button is pressed. Calls the answer GUI to be created and passes in the question selected.                         |
-| `handle_button_press_select_answer(event, button_number, int_question_selected)` | Handles events when an answer button is pressed. Updates the answer selected and evaluates if it is correct. If correct, updates the score. Then calls the question GUI to be re-created. |
+| `handle_button_press_select_answer(event, button_number, int_question_selected)` | Handles events when an answer button is pressed. Updates the answer selected and evaluates if it is correct. If correct, update the score. Then, it calls the question GUI to be re-created. |
 | `handle_button_press_reset(event)`            | Resets the questions and the score.                                                                                                               |
 | `handle_button_press_back(event)`             | Returns the user to the question GUI so they can select another question.                                                                         |
 
@@ -133,7 +132,7 @@ Creates the button used on both gui screens for questions and answers.
 ### Utility functions
 
 #### clear_root()
-Destroys the current gui for use when creating a new one so they dont indefinatly overlap.
+Destroys the current GUI for use when creating a new one so they don't overlap.
 
 ---
 
@@ -146,7 +145,7 @@ The tkinter object to which all the tkinter components are added to.
 An integer to store the questions that the user has got correct.
 
 #### questions
-A dictionarry to store the questions and answers that make the game work.
+A dictionary to store the questions and answers that make the game work.
 
 ---
 
@@ -158,7 +157,7 @@ A dictionarry to store the questions and answers that make the game work.
 - Stop using global variables.
 - Write some tests.
 - Add error handling.
-- Stop the terminal comimg up when the GUI opens.
+- Stop the terminal coming up when the GUI opens.
 
 ---
 
