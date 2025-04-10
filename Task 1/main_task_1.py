@@ -4,7 +4,6 @@ from create_calculations import create_questions
 root = tk.Tk()
 root.title("Generates simple equation")
 
-questions = {}
 questions_correct = 0
 
 def create_gui_questions(questions: dict, questions_correct: int):
@@ -241,7 +240,7 @@ def handle_button_press_select_answer(event, button_number, int_question_selecte
     """
     Handles button press event
     """
-    global questions
+    #global questions  #seems to be erroring linting.  Works without check why later.
     global questions_correct
     string_question_selected = "question_" + str(int_question_selected)
     string_answer_selected = "answers_" + str(button_number)
@@ -264,8 +263,7 @@ def handle_button_press_reset(event):
     """
     print("Reset was pressed")
     #resets questions and questions correct globally
-    global questions
-    global questions_correct
+    global questions, questions_correct
     questions = create_questions()
     questions_correct = 0
     clear_root()
