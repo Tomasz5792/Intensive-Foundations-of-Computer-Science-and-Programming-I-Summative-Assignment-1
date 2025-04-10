@@ -52,9 +52,10 @@ git clone https://github.com/Tomasz5792/Intensive-Foundations-of-Computer-Scienc
 </details>
 
 ### How to use the app
-1. 
-2. 
-3. 
+1. Install and open the app as detailed in the how to install the app section.
+2. Click on a question to answer.  ![Question screen](Question-screen.png)
+3. Click on an answer for the question.  ![Answer screen](Answer-screen.png)
+4. Watch your score go up.
 
 </details>
 <details closed><summary>Technical Documentation 🧑‍💼</summary>
@@ -64,17 +65,76 @@ git clone https://github.com/Tomasz5792/Intensive-Foundations-of-Computer-Scienc
 
 ### Modules Used
 
+<details closed><summary>tkinter</summary>
+[Documentation for tkinter](https://docs.python.org/3/library/tkinter.html)
+</details>
+
+<details closed><summary>custom module create_calculations.py</summary>
+
+### Main functions
+#### create_questions()
+Used to create a dictionarry of questions and answers for use in the gui.
+
+#### create_answer(i: int, answer: int, x: int, is_correct_answer: bool=False)
+Called from create_questions() and is used to create correct and incorrect answers for each question.
+
+</details>
 
 ### Main functions
 
+#### create_gui_questions(questions: dict, questions_correct: int)
+Creates the gui question layout.  It is a 3 x 3 grid of math question buttons.  When questions are answered the button is replaced by a guestion label which displays if the answer was correct or not.  There is also a reset button to reset the questions and score and a label to display the score.  It requires the questions dictionarry and the questions correct integer to be passed to it.
+
+#### create_gui_answer(questions: dict, int_question_selected: int, questions_correct: int)
+Clone of the create_gui_questions function but creates an answer gui with 9 answers for the uset to select.  Also has a back button.  Additionally to the create_gui_questions function it also requires the question selected to be passed to it.
+
+
+### gui component functions
+
+#### create_label(row: int, columnspan: int=3, text: str="Error")
+Creates a label for the title and questions answered box.
+
+#### create_label_question(row: int, column: int, text: str="Error")
+Creates the label to replace the button when the question is answered, used on the question screen.
+
+#### create_button(row: int, column: int, int_question_selected: int=0, button_number: int=0, width: int=20, height: int=5, text: str="Error", button_type: str="calculation")
+Creates the button used on both gui screens for questions and answers.
+
 
 ### Event handling functions
+#### handle_button_press(event, row, column, button_number)
+Used to test the app is working by recording which button is pressed.
+
+#### handle_button_press_select_question(event, button_number)
+Handles events when a question button is pressed.  Calls the answer gui to be created and passes in the question selected.
+
+#### handle_button_press_select_answer(event, button_number, int_question_selected)
+Handles events when an answer button is pressed.  Updates the answer selected and evaluates if it is correct, if correct updates the score.  Thenc alls the question gui to be re-created.
+
+#### handle_button_press_reset(event)
+Resets the questions and the score.
+
+#### handle_button_press_back(event)
+Returns the user to the question gui so they can select another question.
 
 
 ### Utility functions
 
+#### clear_root()
+Destroys the current gui for use when creating a new one so they dont indefinatly overlap.
+
 
 ### Global Variables
+
+#### root
+The tkinter object to which all the tkinter components are added to.
+
+#### questions_correct
+An integer to store the questions that the user has got correct.
+
+#### questions
+A dictionarry to store the questions and answers that make the game work.
+
 
 </details>
 <details closed><summary>Future Plans 🔐</summary>
@@ -85,20 +145,5 @@ git clone https://github.com/Tomasz5792/Intensive-Foundations-of-Computer-Scienc
 - Write some tests.
 - Add error handling.
 - Stop the terminal comimg up when the GUI opens.
-
-</details>
-
-
-
-
-<details closed><summary>To be deleted after finished 🔐</summary>
-
-#to use maybee
-
-[Link Text](URL or Path)
-
-```sh
-node -v
-```
 
 </details>
